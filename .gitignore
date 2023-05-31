@@ -1,0 +1,14 @@
+# Ignores cmake folder and CLion IDE settings
+**/cmake-build-debug/**
+**/.idea/**
+
+# Ignores all CMakeLists files
+**/CMakeLists.txt
+
+# Excludes subfolders
+!*/
+
+# Excludes resources folder anywhere in the subtree
+# It also excludes, for example, CMakeLists in any 'resources' folder
+!**/resources/**
+
