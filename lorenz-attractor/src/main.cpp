@@ -195,8 +195,8 @@ void funKey (GLFWwindow* window, int key, int scancode, int action, int mods) {
 
     switch (key) {
         case GLFW_KEY_S: (mods == GLFW_MOD_SHIFT) ? sigma += 0.05 : sigma -= 0.05; break;
-        case GLFW_KEY_R: (mods == GLFW_MOD_SHIFT) ? rho += 0.05 : rho -= 0.05; break;
-        case GLFW_KEY_B: (mods == GLFW_MOD_SHIFT) ? beta += 0.05 : beta -= 0.05; break;
+        case GLFW_KEY_R: (mods == GLFW_MOD_SHIFT) ? rho += 0.1 : rho -= 0.1; break;
+        case GLFW_KEY_B: (mods == GLFW_MOD_SHIFT) ? beta += 0.025 : beta -= 0.025; break;
         default: flag = false;
     }
 
