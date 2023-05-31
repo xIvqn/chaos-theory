@@ -191,7 +191,7 @@ void funFramebufferSize(GLFWwindow *window, int width, int height) {
 void funKey (GLFWwindow* window, int key, int scancode, int action, int mods) {
 
     bool flag = true;
-    
+
     if (action == GLFW_RELEASE) return;
 
     switch (key) {
@@ -203,9 +203,9 @@ void funKey (GLFWwindow* window, int key, int scancode, int action, int mods) {
     }
 
     if (flag) {
-        if (sigma <= 0.0) sigma = 0.01;
-        if (rho <= 0.0) rho = 0.01;
-        if (beta <= 0.0) beta = 0.01;
+        if (sigma <= 0.0) sigma = 0.05;
+        if (rho <= 0.0) rho = 0.1;
+        if (beta <= 0.0) beta = 0.025;
         if (dt <= 0.0) dt = 0.002;
 
         printf("Sigma: %f\t| Rho: %f\t| Beta: %f\t| dt: %f\n", sigma, rho, beta, dt);
