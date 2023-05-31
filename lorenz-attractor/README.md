@@ -1,12 +1,13 @@
 # Lorenz Attractor
 
-## Explanation
+The Lorenz attractor is a mathematical model that describes the behavior of a chaotic system. It was discovered by Edward Lorenz in 1963 while studying atmospheric convection patterns. The attractor is defined by a set of three coupled nonlinear differential equations, which represent simplified dynamics of convection.
 
-The Lorenz Attractor is a mathematical model that exhibits chaotic behavior and is named after Edward Lorenz, an American mathematician and meteorologist. It was first described by Lorenz in 1963 while he was studying the behavior of a simplified model of atmospheric convection.
+The Lorenz attractor is famous for its intricate and non-repeating pattern of trajectories in three-dimensional space. It exhibits sensitive dependence on initial conditions, meaning even small changes in the starting conditions can lead to significantly different outcomes. The attractor forms a butterfly-shaped structure with two symmetric but not identical wings, known as a strange attractor.
 
-This model is defined by a set of three coupled ordinary differential equations that represent the evolution of a system in three-dimensional space. These equations describe how the system's variables change over time, determining the trajectory of the system in what is known as phase space.
 
 ## Mathematical model
+
+This model is defined by a set of three coupled ordinary differential equations that represent the evolution of a system in three-dimensional space. These equations describe how the system's variables change over time, determining the trajectory of the system in what is known as phase space.
 
 ### Equations
 
@@ -48,6 +49,43 @@ The Lorenz Attractor exhibits several key properties of chaotic systems. One of 
 
 Another important characteristic of the Lorenz Attractor is the presence of a strange attractor. The trajectory of the system never repeats itself, and it settles into a complex, non-repeating pattern. The attractor has a fractal nature, meaning that it exhibits self-similarity at different scales. When visualized, the Lorenz Attractor reveals intricate details and fine structures that repeat at different levels of magnification.
 
+## Dependencies
+
+In the root directory of the project all CMakeLists files are included, you just have to rename the one you need to use to `CMakeLists.txt`.
+
+### Linux
+
+Install the required libraries using the following commands:
+
+```sh
+sudo apt install build-essential
+sudo apt install libglew-dev
+sudo apt install libglfw3-dev
+sudo apt install libglm-dev
+sudo apt install libassimp-dev
+sudo apt install libfreeimage-dev
+```
+
+### MacOS
+
+Install the required libraries using the following commands:
+
+```sh
+brew install gcc
+brew install glew
+brew install glfw
+brew install glm
+brew install assimp
+brew install freeimage
+```
+
+### Windows
+
+All the required libraries are including in the `/lib/` directory.
+
+Also, you might need **MinGW**, in case you do not have it already installed. You can download it from [OSDN website](https://osdn.net/projects/mingw/releases/).
+
+
 ## Experiments
 
 ### Experiment 1
@@ -85,5 +123,14 @@ Parameters: $\sigma = 5$, $\rho = 15$, $\beta = 2$:
 ![image](https://github.com/xIvqn/chaos-theory/assets/72264031/2efae893-4115-407f-8201-8b0f4d56f309)
 
 
+## Conlcusion
 
-Through the implementation of the Lorenz Attractor in computational models and visualizations, researchers and enthusiasts can explore the fascinating world of chaos theory and gain a deeper understanding of the complex and beautiful dynamics inherent in chaotic systems.
+In conclusion, the implementation of the Lorenz attractor model provides a valuable tool for studying and visualizing the dynamics of a chaotic system. The Lorenz attractor is a well-known example of a chaotic system and is widely used to illustrate the principles of chaos theory.
+
+By implementing the Lorenz attractor model, users can generate time series data that captures the complex behavior of the system. This data can be further analyzed and visualized, allowing for a deeper understanding of chaotic phenomena such as sensitivity to initial conditions, strange attractors, and the intricate patterns of trajectories.
+
+The implementation of the Lorenz attractor model offers the opportunity to explore different parameter settings, such as sigma, rho, and beta, and observe the resulting changes in the attractor's structure and behavior. This allows users to gain insights into how variations in these parameters affect the system's chaotic dynamics.
+
+Furthermore, the visualization capabilities provided by the implementation allow users to observe the attractor's geometric shape and its evolution over time. This visual representation enhances the intuitive understanding of chaotic behavior and provides a platform for further analysis and exploration.
+
+Overall, the implementation of the Lorenz attractor model serves as a powerful tool for studying chaos theory, promoting experimentation, and advancing the understanding of chaotic systems and their implications in various fields of science and engineering.
