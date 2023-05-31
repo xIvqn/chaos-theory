@@ -49,6 +49,16 @@ The Lorenz Attractor exhibits several key properties of chaotic systems. One of 
 
 Another important characteristic of the Lorenz Attractor is the presence of a strange attractor. The trajectory of the system never repeats itself, and it settles into a complex, non-repeating pattern. The attractor has a fractal nature, meaning that it exhibits self-similarity at different scales. When visualized, the Lorenz Attractor reveals intricate details and fine structures that repeat at different levels of magnification.
 
+## Code features
+
+* Ability to rotate, zoom in and zoom out the camera (dragging and scrolling).
+* Change value for sigma parameter ($\sigma$, `s` key with `SHIFT` as modifier).
+* Change value for rho parameter ($\rho$, `r` key with `SHIFT` as modifier).
+* Change value for beta parameter ($\beta$, `b` key with `SHIFT` as modifier).
+* Change value for time expansion ($dt$, `t` key with `SHIFT` as modifier).
+* Clear window on command (`c` key).
+* Change between trajectory and point-only modes (`m` key).
+
 ## Dependencies
 
 In the root directory of the project all CMakeLists files are included, you just have to rename the one you need to use to `CMakeLists.txt`.
