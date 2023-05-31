@@ -14,6 +14,8 @@ void drawObject(Model model, glm::vec3 color, glm::mat4 P, glm::mat4 V, glm::mat
 
 void funFramebufferSize(GLFWwindow *window, int width, int height);
 
+void funKey (GLFWwindow* window, int key, int scancode, int action, int mods);
+
 void funScroll(GLFWwindow *window, double xoffset, double yoffset);
 
 void funCursorPos(GLFWwindow *window, double xpos, double ypos);
@@ -76,6 +78,7 @@ int main() {
 
     // Configure callbacks
     glfwSetFramebufferSizeCallback(window, funFramebufferSize);
+    glfwSetKeyCallback(window, funKey);
     glfwSetScrollCallback(window, funScroll);
     glfwSetCursorPosCallback(window, funCursorPos);
 
@@ -183,6 +186,31 @@ void funFramebufferSize(GLFWwindow *window, int width, int height) {
     // w and h update
     w = width;
     h = height;
+
+}
+
+void funKey (GLFWwindow* window, int key, int scancode, int action, int mods) {
+
+    bool flag = true;
+
+    switch (key) {
+        case GLFW_KEY_S: (mods == GLFW_MOD_SHIFT) ? sigma += 0.05 : sigma -= 0.05; break;
+        case GLFW_KEY_R: (mods == GLFW_MOD_SHIFT) ? rho += 0.05 : rho -= 0.05; break;
+        case GLFW_KEY_B: (mods == GLFW_MOD_SHIFT) ? beta += 0.05 : beta -= 0.05; break;
+        default: flag = false;
+    }
+
+    if (flag) {
+        if (sigma <= 0.0) sigma = 0.01;
+        if (rho <= 0.0) rho = 0.01;
+        if (beta <= 0.0) beta = 0.01;
+
+        printf("Sigma: %f\t| Rho: %f\t| Beta: %f\n", sigma, rho, beta);
+        fflush(stdout);
+
+        vector.clear();
+
+    }
 
 }
 
