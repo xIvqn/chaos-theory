@@ -46,6 +46,8 @@ float fovy = 60.0;
 float alphaX = 0.0;
 float alphaY = 0.0;
 
+bool singlePoint = false;
+
 int main() {
 
     // Initialize GLFW
@@ -148,6 +150,7 @@ void renderScene() {
     glm::mat4 T = glm::translate(I, glm::vec3(pos.x, pos.y, pos.z));
     glm::mat4 CubeM = T * S;
 
+    if (singlePoint) vector.clear();
     vector.push_back(CubeM);
 
     // Draw shape
@@ -200,6 +203,7 @@ void funKey (GLFWwindow* window, int key, int scancode, int action, int mods) {
         case GLFW_KEY_B: (mods == GLFW_MOD_SHIFT) ? beta += 0.025 : beta -= 0.025; break;
         case GLFW_KEY_T: (mods == GLFW_MOD_SHIFT) ? dt += 0.002 : dt -= 0.002; break;
         case GLFW_KEY_C: break;
+        case GLFW_KEY_M: singlePoint = !singlePoint;
         default: flag = false;
     }
 
