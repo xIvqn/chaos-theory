@@ -216,6 +216,7 @@ void funKey (GLFWwindow* window, int key, int scancode, int action, int mods) {
         printf("Sigma: %f\t| Rho: %f\t| Beta: %f\t| dt: %f\n", sigma, rho, beta, dt);
         fflush(stdout);
 
+        pos = {0.1, 0, 0};
         vector.clear();
 
     }
