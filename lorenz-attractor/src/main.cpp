@@ -192,6 +192,8 @@ void funFramebufferSize(GLFWwindow *window, int width, int height) {
 void funKey (GLFWwindow* window, int key, int scancode, int action, int mods) {
 
     bool flag = true;
+    
+    if (action == GLFW_RELEASE) return;
 
     switch (key) {
         case GLFW_KEY_S: (mods == GLFW_MOD_SHIFT) ? sigma += 0.05 : sigma -= 0.05; break;
