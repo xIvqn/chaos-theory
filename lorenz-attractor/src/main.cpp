@@ -37,7 +37,7 @@ int w = 1000;
 int h = 1000;
 
 Position pos = {0.1, 0, 0};
-float sigma = 10, rho = 28, beta = 8.0 / 3.0;
+float sigma = 10, rho = 28, beta = 8.0 / 3.0, dt = 0.01;
 
 std::vector<glm::mat4> vector;
 
@@ -135,7 +135,6 @@ void renderScene() {
     shaders.setVec3("ueye", eye);
 
     // New point calculation
-    float dt = 0.01;
     float dx = (sigma * (pos.y - pos.x)) * dt;
     float dy = (pos.x * (rho - pos.z) - pos.y) * dt;
     float dz = (pos.x * pos.y - beta * pos.z) * dt;
@@ -199,6 +198,7 @@ void funKey (GLFWwindow* window, int key, int scancode, int action, int mods) {
         case GLFW_KEY_S: (mods == GLFW_MOD_SHIFT) ? sigma += 0.05 : sigma -= 0.05; break;
         case GLFW_KEY_R: (mods == GLFW_MOD_SHIFT) ? rho += 0.1 : rho -= 0.1; break;
         case GLFW_KEY_B: (mods == GLFW_MOD_SHIFT) ? beta += 0.025 : beta -= 0.025; break;
+        case GLFW_KEY_T: (mods == GLFW_MOD_SHIFT) ? dt += 0.002 : dt -= 0.002; break;
         default: flag = false;
     }
 
@@ -206,8 +206,9 @@ void funKey (GLFWwindow* window, int key, int scancode, int action, int mods) {
         if (sigma <= 0.0) sigma = 0.01;
         if (rho <= 0.0) rho = 0.01;
         if (beta <= 0.0) beta = 0.01;
+        if (dt <= 0.0) dt = 0.002;
 
-        printf("Sigma: %f\t| Rho: %f\t| Beta: %f\n", sigma, rho, beta);
+        printf("Sigma: %f\t| Rho: %f\t| Beta: %f\t| dt: %f\n", sigma, rho, beta, dt);
         fflush(stdout);
 
         vector.clear();
