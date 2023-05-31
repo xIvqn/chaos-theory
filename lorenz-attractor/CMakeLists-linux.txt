@@ -1,0 +1,12 @@
+cmake_minimum_required(VERSION 3.22)
+set(PROJECT_NAME lorenz_attractor)
+project(${PROJECT_NAME})
+set(CMAKE_CXX_STANDARD 14)
+
+include_directories(src /usr/include)
+
+file (GLOB_RECURSE SRC_FILES CONFIGURE_DEPENDS src/*.cpp)
+add_executable(${PROJECT_NAME} ${SRC_FILES})
+
+target_link_libraries(${PROJECT_NAME} GL GLEW glfw assimp freeimage)
+set_target_properties(${PROJECT_NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY_DEBUG binary)

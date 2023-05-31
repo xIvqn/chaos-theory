@@ -1,0 +1,19 @@
+cmake_minimum_required(VERSION 3.22)
+set(PROJECT_NAME practica3)
+project(${PROJECT_NAME})
+set(CMAKE_CXX_STANDARD 14)
+
+set(GLEW_LOCATION      /usr/local/Cellar/glew/2.2.0_1)
+set(GLFW_LOCATION      /usr/local/Cellar/glfw/3.3.7)
+set(GLM_LOCATION       /usr/local/Cellar/glm/0.9.9.8)
+set(ASSIMP_LOCATION    /usr/local/Cellar/assimp/5.2.4)
+set(FREEIMAGE_LOCATION /usr/local/Cellar/freeimage/3.18.0)
+
+include_directories(src ${GLEW_LOCATION}/include ${GLFW_LOCATION}/include ${GLM_LOCATION}/include ${ASSIMP_LOCATION}/include ${FREEIMAGE_LOCATION}/include)
+link_directories(${GLEW_LOCATION}/lib ${GLFW_LOCATION}/lib ${GLM_LOCATION}/lib ${ASSIMP_LOCATION}/lib ${FREEIMAGE_LOCATION}/lib)
+
+file (GLOB_RECURSE SRC_FILES CONFIGURE_DEPENDS src/*.cpp)
+add_executable(${PROJECT_NAME} ${SRC_FILES})
+
+target_link_libraries(${PROJECT_NAME} "-framework OpenGL" libGLEW.2.2.0.dylib libglfw.3.3.dylib libassimp.5.2.0.dylib libfreeimage.3.18.0.dylib)
+set_target_properties(${PROJECT_NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY_DEBUG binary)
