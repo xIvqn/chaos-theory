@@ -31,6 +31,8 @@ The behavior of the Lorenz attractor is characterized by a strange attractor—a
 
 The Lorenz attractor has been extensively studied in the field of chaos theory and has become an iconic example of a chaotic system. It has applications in various fields, including physics, mathematics, meteorology, and engineering. The attractor's properties and the insights gained from its study have contributed to our understanding of complex, nonlinear systems and the phenomenon of chaos.
 
+More information [here](./lorenz-attractor/README.md).
+
 ## Key Features
 
 1. **Interactive Visualization**: The repository integrates with visualization libraries to create interactive visualizations of the Lorenz Attractor. Users can manipulate parameters, view the attractor from different angles, and zoom in/out to examine its intricate structure. The visualization may include features like color mapping, trajectory animations, and user-friendly controls.
