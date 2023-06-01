@@ -102,35 +102,35 @@ Also, you might need **MinGW**, in case you do not have it already installed. Yo
 
 Parameters: $\sigma = 10$, $\rho = 28$, $\beta = 8/3$:
 
-![image](https://github.com/xIvqn/chaos-theory/assets/72264031/ae554e44-8eab-4d71-a924-6d6468444cdb)
+![image](./assets/lorenz-attractor-experiment-1.png)
 
 
 ### Experiment 2
 
 Parameters: $\sigma = 10$, $\rho = 50$, $\beta = 4$:
 
-![image](https://github.com/xIvqn/chaos-theory/assets/72264031/8a330866-05b5-42da-96f0-b8943c55aad8)
+![image](./assets/lorenz-attractor-experiment-2.png)
 
 
 ### Experiment 3
 
 Parameters: $\sigma = 10$, $\rho = 45$, $\beta = 10$:
 
-![image](https://github.com/xIvqn/chaos-theory/assets/72264031/0aae8652-a32f-49d8-a416-c6e33542a37e)
+![image](./assets/lorenz-attractor-experiment-3.png)
 
 
 ### Experiment 4
 
 Parameters: $\sigma = 25$, $\rho = 40$, $\beta = 7$:
 
-![image](https://github.com/xIvqn/chaos-theory/assets/72264031/ec174e1c-9a9f-4e1c-bda4-9827c16cadf7)
+![image](./assets/lorenz-attractor-experiment-4.png)
 
 
 ### Experiment 5
 
 Parameters: $\sigma = 5$, $\rho = 15$, $\beta = 2$:
 
-![image](https://github.com/xIvqn/chaos-theory/assets/72264031/2efae893-4115-407f-8201-8b0f4d56f309)
+![image](./assets/lorenz-attractor-experiment-5.png)
 
 
 ## Conlcusion
