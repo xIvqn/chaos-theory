@@ -11,4 +11,6 @@
 # Excludes resources folder anywhere in the subtree
 # It also excludes, for example, CMakeLists in any 'resources' folder
 !**/resources/**
+# Excludes dlls files in binary folders
+!**/binary/**.dll
 
